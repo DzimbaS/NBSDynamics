@@ -1,0 +1,3018 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Output - NBSDynamics documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#output-classes-for-the-nbsdynamics-package" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="NBSDynamics documentation" class="md-header__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NBSDynamics documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Output
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      NBSDynamics documentation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../changelog/" class="md-tabs__link">
+      Changelog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guides/contribute/" class="md-tabs__link">
+        Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../core/" class="md-tabs__link md-tabs__link--active">
+        Reference
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NBSDynamics documentation" class="md-nav__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    NBSDynamics documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        NBSDynamics documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/contribute/" class="md-nav__link">
+        How to contribute to NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/run_simulation/" class="md-nav__link">
+        How to run a simulation in NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Bio process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bio process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Bio process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bio_process/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/common/" class="md-nav__link">
+        Common
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Coral
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Coral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Coral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coral/coral/" class="md-nav__link">
+        Coral
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Hydrodynamics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hydrodynamics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hydrodynamics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydrodynamics/hydromodels/" class="md-nav__link">
+        Hydromodels
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Output
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Output" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Output
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Output
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Output
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-classes-for-the-nbsdynamics-package" class="md-nav__link">
+    Output classes for the NBSDynamics package.
+  </a>
+  
+    <nav class="md-nav" aria-label="Output classes for the NBSDynamics package.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol" class="md-nav__link">
+    OutputProtocol
+  </a>
+  
+    <nav class="md-nav" aria-label="OutputProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_filename" class="md-nav__link">
+    output_filename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_filepath" class="md-nav__link">
+    output_filepath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_params" class="md-nav__link">
+    output_params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper" class="md-nav__link">
+    Wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper" class="md-nav__link">
+    OutputWrapper
+  </a>
+  
+    <nav class="md-nav" aria-label="OutputWrapper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.check_output_dir" class="md-nav__link">
+    check_output_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.defined" class="md-nav__link">
+    defined
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.get_xy_stations" class="md-nav__link">
+    get_xy_stations()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-models" class="md-nav__link">
+    Output models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput" class="md-nav__link">
+    BaseOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="BaseOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput.output_filepath" class="md-nav__link">
+    output_filepath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput.valid_output" class="md-nav__link">
+    valid_output()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput" class="md-nav__link">
+    HisOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="HisOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput" class="md-nav__link">
+    MapOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="MapOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Simulation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simulation/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-classes-for-the-nbsdynamics-package" class="md-nav__link">
+    Output classes for the NBSDynamics package.
+  </a>
+  
+    <nav class="md-nav" aria-label="Output classes for the NBSDynamics package.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol" class="md-nav__link">
+    OutputProtocol
+  </a>
+  
+    <nav class="md-nav" aria-label="OutputProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_filename" class="md-nav__link">
+    output_filename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_filepath" class="md-nav__link">
+    output_filepath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.output_params" class="md-nav__link">
+    output_params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_protocol.OutputProtocol.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper" class="md-nav__link">
+    Wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper" class="md-nav__link">
+    OutputWrapper
+  </a>
+  
+    <nav class="md-nav" aria-label="OutputWrapper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.check_output_dir" class="md-nav__link">
+    check_output_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.defined" class="md-nav__link">
+    defined
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.get_xy_stations" class="md-nav__link">
+    get_xy_stations()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_wrapper.OutputWrapper.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-models" class="md-nav__link">
+    Output models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput" class="md-nav__link">
+    BaseOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="BaseOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput.output_filepath" class="md-nav__link">
+    output_filepath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.BaseOutput.valid_output" class="md-nav__link">
+    valid_output()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput" class="md-nav__link">
+    HisOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="HisOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.HisOutput.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput" class="md-nav__link">
+    MapOutput
+  </a>
+  
+    <nav class="md-nav" aria-label="MapOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.initialize" class="md-nav__link">
+    initialize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.output.output_model.MapOutput.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Deltares/NBSDynamics/edit/master/docs/reference/output/output.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Output</h1>
+                
+                <h2 id="output-classes-for-the-nbsdynamics-package">Output classes for the NBSDynamics package.<a class="headerlink" href="#output-classes-for-the-nbsdynamics-package" title="Permanent link">&para;</a></h2>
+<h3 id="protocol">Protocol<a class="headerlink" href="#protocol" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.output.output_protocol.OutputProtocol" class="doc doc-heading">
+        <code>OutputProtocol</code>
+
+
+
+<a href="#src.core.output.output_protocol.OutputProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Protocol defining how an Output model should look like.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_protocol.OutputProtocol.initialize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_protocol.OutputProtocol.initialize" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes an output model with the given coral input.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>coral</code></td>
+        <td><code>Coral</code></td>
+        <td><p>Coral input model.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_protocol.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initializes an output model with the given coral input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coral (Coral): Coral input model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the model does not implement its own definition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_protocol.OutputProtocol.output_filename" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">output_filename</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_protocol.OutputProtocol.output_filename" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The basename with extension the output file will have.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>str: Output filename.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_protocol.OutputProtocol.output_filepath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">output_filepath</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_protocol.OutputProtocol.output_filepath" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The full path to the output file.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Path</code></td>
+      <td><p>Path: Output filepath.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_protocol.OutputProtocol.output_params" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">output_params</span><span class="p">:</span> <span class="n">ModelParameters</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_protocol.OutputProtocol.output_params" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The output parameters needed to interact with the netcdf dataset.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ModelParameters</code></td>
+      <td><p>ModelParameters: Object with netcdf parameters as attrs..</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_protocol.OutputProtocol.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_protocol.OutputProtocol.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Updates the output model with the given coral and year.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>coral</code></td>
+        <td><code>Coral</code></td>
+        <td><p>Coral input model.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>year</code></td>
+        <td><code>int</code></td>
+        <td><p>Current calculation year.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_protocol.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Updates the output model with the given coral and year.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coral (Coral): Coral input model.</span>
+<span class="sd">        year (int): Current calculation year.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the model does not implement its own definition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="wrapper">Wrapper<a class="headerlink" href="#wrapper" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.output.output_wrapper.OutputWrapper" class="doc doc-heading">
+        <code>OutputWrapper</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Output files based on predefined output content.
+Generate output files of CoralModel simulation. Output files are formatted as NetCDF4-files.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Representation of Output.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_wrapper.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Representation of Output.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Output(xy_coordinates=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">xy_coordinates</span><span class="si">}</span><span class="s2">, first_date=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_date</span><span class="si">}</span><span class="s2">)&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.__str__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.__str__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>String-representation of Output.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_wrapper.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;String-representation of Output.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Output exported:</span><span class="se">\n\t</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">map_output</span><span class="si">}</span><span class="se">\n\t</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">his_output</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">defined</span>
+        <span class="k">else</span> <span class="s2">&quot;Output undefined.&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.check_output_dir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_output_dir</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.check_output_dir" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Checks an <code>output_dir</code> attribute is given for the <code>output_model</code> instances
+<code>map_output</code> and <code>his_output</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>values</code></td>
+        <td><code>dict</code></td>
+        <td><p>Dictionary of attribute values given by the user.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>dict: Dictionary of attribute values with a valid <code>output_dir</code> value.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_wrapper.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@root_validator</span><span class="p">(</span><span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">check_output_dir</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks an `output_dir` attribute is given for the `output_model` instances</span>
+<span class="sd">    `map_output` and `his_output`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        values (dict): Dictionary of attribute values given by the user.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Dictionary of attribute values with a valid `output_dir` value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">check_output_model_dir</span><span class="p">(</span><span class="n">out_model</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">out_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">out_dir_val</span> <span class="o">=</span> <span class="n">out_model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;output_dir&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">out_dir_val</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">out_model</span><span class="p">[</span><span class="s2">&quot;output_dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;output_dir&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">out_model</span>
+
+    <span class="n">values</span><span class="p">[</span><span class="s2">&quot;map_output&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">check_output_model_dir</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;map_output&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+    <span class="n">values</span><span class="p">[</span><span class="s2">&quot;his_output&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">check_output_model_dir</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;his_output&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">values</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.defined" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">defined</span><span class="p">:</span> <span class="nb">bool</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.defined" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Output is defined.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.get_xy_stations" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_xy_stations</span><span class="p">(</span><span class="n">xy_coordinates</span><span class="p">:</span> <span class="n">ndarray</span><span class="p">,</span> <span class="n">outpoint</span><span class="p">:</span> <span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.get_xy_stations" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Determine space indices based on the (x,y)-coordinates of the stations.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>xy_coordinates</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>Input xy-coordinates system.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>outpoint</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>Boolean per x-y indicating if his output is desired.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tuple[numpy.ndarray, numpy.ndarray]</code></td>
+      <td><p>Tuple[np.ndarray, np.ndarray]: Resulting tuple of xy_stations, idx_stations</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_wrapper.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">get_xy_stations</span><span class="p">(</span>
+    <span class="n">xy_coordinates</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">outpoint</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine space indices based on the (x,y)-coordinates of the stations.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        xy_coordinates (np.ndarray): Input xy-coordinates system.</span>
+<span class="sd">        outpoint (np.ndarray): Boolean per x-y indicating if his output is desired.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Tuple[np.ndarray, np.ndarray]: Resulting tuple of xy_stations, idx_stations</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nout_his</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">xy_coordinates</span><span class="p">[</span><span class="n">outpoint</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">x_coord</span> <span class="o">=</span> <span class="n">xy_coordinates</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_coord</span> <span class="o">=</span> <span class="n">xy_coordinates</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">x_station</span> <span class="o">=</span> <span class="n">xy_coordinates</span><span class="p">[</span><span class="n">outpoint</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_station</span> <span class="o">=</span> <span class="n">xy_coordinates</span><span class="p">[</span><span class="n">outpoint</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nout_his</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)):</span>
+        <span class="n">idx</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">x_coord</span> <span class="o">-</span> <span class="n">x_station</span><span class="p">[</span><span class="n">s</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y_coord</span> <span class="o">-</span> <span class="n">y_station</span><span class="p">[</span><span class="n">s</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="p">)</span>
+
+    <span class="n">idx_stations</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xy_coordinates</span><span class="p">[</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:],</span> <span class="n">idx_stations</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_wrapper.OutputWrapper.initialize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_wrapper.OutputWrapper.initialize" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes all available output models (His and Map).</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>coral</code></td>
+        <td><code>Coral</code></td>
+        <td><p>Coral model to be used in the output.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_wrapper.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initializes all available output models (His and Map).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coral (Coral): Coral model to be used in the output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Initialize Output dir path.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">output_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Initialize output models.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">his_output</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">coral</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">map_output</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">coral</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="output-models">Output models<a class="headerlink" href="#output-models" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.output.output_model.BaseOutput" class="doc doc-heading">
+        <code>BaseOutput</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.output.output_model.BaseOutput" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Base class containing the generic definition of a 'Coral' output model.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_model.BaseOutput.output_filepath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">output_filepath</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_model.BaseOutput.output_filepath" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the full path to the output netcdf file.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Path</code></td>
+      <td><p>Path: Output .nc file.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_model.BaseOutput.valid_output" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">valid_output</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span></code>
+
+
+<a href="#src.core.output.output_model.BaseOutput.valid_output" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Verifies whether this model can generate valid output.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>bool: Output is valid.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">valid_output</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Verifies whether this model can generate valid output.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: Output is valid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_params</span><span class="o">.</span><span class="n">valid_output</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.output.output_model.HisOutput" class="doc doc-heading">
+        <code>HisOutput</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.output.output_model.HisOutput" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Object representing a His output. Implements the 'OutputProtocol'.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_model.HisOutput.initialize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">:</span> <span class="n">Coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_model.HisOutput.initialize" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initiate history output file in which daily output at predefined locations within the model is stored.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">:</span> <span class="n">Coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initiate history output file in which daily output at predefined locations within the model is stored.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_output</span><span class="p">():</span>
+        <span class="k">return</span>
+    <span class="k">with</span> <span class="n">Dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_filepath</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;NETCDF4&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">_his_data</span><span class="p">:</span>
+        <span class="n">_his_data</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Historic simulation data of the CoralModel&quot;</span>
+
+        <span class="c1"># dimensions</span>
+        <span class="n">_his_data</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">_his_data</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;stations&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xy_stations</span><span class="p">))</span>
+
+        <span class="c1"># variables</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,))</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;days since </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_date</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;days&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;station_x_coordinate&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;stations&quot;</span><span class="p">,))</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;station_y_coordinate&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;stations&quot;</span><span class="p">,))</span>
+
+        <span class="c1"># setup data set</span>
+        <span class="n">x</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xy_stations</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">y</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xy_stations</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">init_lme</span><span class="p">():</span>
+            <span class="n">light_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;Iz&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">light_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;representative light-intensity&quot;</span>
+            <span class="n">light_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;micro-mol photons m-2 s-1&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_fme</span><span class="p">():</span>
+            <span class="n">flow_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;ucm&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">flow_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;in-canopy flow&quot;</span>
+            <span class="n">flow_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m s-1&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_tme</span><span class="p">():</span>
+            <span class="n">temp_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;Tc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral temperature&quot;</span>
+            <span class="n">temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+
+            <span class="n">low_temp_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Tlo&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">low_temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;lower thermal limit&quot;</span>
+            <span class="n">low_temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+
+            <span class="n">high_temp_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Thi&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">high_temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;upper thermal limit&quot;</span>
+            <span class="n">high_temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_pd</span><span class="p">():</span>
+            <span class="n">pd_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PD&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">pd_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;photosynthetic rate&quot;</span>
+            <span class="n">pd_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_ps</span><span class="p">():</span>
+            <span class="n">pt_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">pt_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;total coral population&quot;</span>
+            <span class="n">pt_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+            <span class="n">ph_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PH&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">ph_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;healthy coral population&quot;</span>
+            <span class="n">ph_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+            <span class="n">pr_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PR&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">pr_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;recovering coral population&quot;</span>
+            <span class="n">pr_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+            <span class="n">pp_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PP&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">pp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;pale coral population&quot;</span>
+            <span class="n">pp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+            <span class="n">pb_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PB&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">pb_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;bleached coral population&quot;</span>
+            <span class="n">pb_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_calc</span><span class="p">():</span>
+            <span class="n">calc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">calc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;calcification&quot;</span>
+            <span class="n">calc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;kg m-2 d-1&quot;</span>
+
+        <span class="k">def</span> <span class="nf">init_md</span><span class="p">():</span>
+            <span class="n">dc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;dc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">dc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral plate diameter&quot;</span>
+            <span class="n">dc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+            <span class="n">hc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;hc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">hc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral height&quot;</span>
+            <span class="n">hc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+            <span class="n">bc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;bc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">bc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral base diameter&quot;</span>
+            <span class="n">bc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+            <span class="n">tc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;tc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">tc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral plate thickness&quot;</span>
+            <span class="n">tc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+            <span class="n">ac_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;ac&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">ac_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral axial distance&quot;</span>
+            <span class="n">ac_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+            <span class="n">vc_set</span> <span class="o">=</span> <span class="n">_his_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;Vc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;stations&quot;</span><span class="p">))</span>
+            <span class="n">vc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral volume&quot;</span>
+            <span class="n">vc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m3&quot;</span>
+
+        <span class="c1"># initial conditions</span>
+        <span class="n">conditions_funct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">lme</span><span class="o">=</span><span class="n">init_lme</span><span class="p">,</span>
+            <span class="n">fme</span><span class="o">=</span><span class="n">init_fme</span><span class="p">,</span>
+            <span class="n">tme</span><span class="o">=</span><span class="n">init_tme</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">=</span><span class="n">init_pd</span><span class="p">,</span>
+            <span class="n">ps</span><span class="o">=</span><span class="n">init_ps</span><span class="p">,</span>
+            <span class="n">calc</span><span class="o">=</span><span class="n">init_calc</span><span class="p">,</span>
+            <span class="n">md</span><span class="o">=</span><span class="n">init_md</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">v_func</span> <span class="ow">in</span> <span class="n">conditions_funct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_params</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">v_func</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_model.HisOutput.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">dates</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_model.HisOutput.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Write data as daily output at predefined locations within the model domain.</p>
+<p>:param coral: coral animal
+:param dates: dates of simulation year</p>
+<p>:type coral: Coral
+:type dates: DataFrame</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">dates</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write data as daily output at predefined locations within the model domain.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :param dates: dates of simulation year</span>
+
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    :type dates: DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_output</span><span class="p">():</span>
+        <span class="k">return</span>
+    <span class="k">with</span> <span class="n">Dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_filepath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">_his_data</span><span class="p">:</span>
+        <span class="n">y_dates</span> <span class="o">=</span> <span class="n">dates</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">ti</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_dates</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_date</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_dates</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="k">def</span> <span class="nf">update_lme</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Iz&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">light</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">update_fme</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;ucm&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">ucm</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">update_tme</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Tc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">temp</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">DataReshape</span><span class="o">.</span><span class="n">variable2array</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span>
+                <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataReshape</span><span class="o">.</span><span class="n">variable2array</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Thi</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span>
+            <span class="p">):</span>
+                <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Tlo&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                    <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+                <span class="p">]</span>
+                <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Thi&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Thi</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                    <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+                <span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Tlo&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span>
+                    <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">))</span>
+                <span class="p">)</span>
+                <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Thi&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">Thi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span>
+                    <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">))</span>
+                <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">update_pd</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PD&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">photo_rate</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">update_ps</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PT&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PH&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">0</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PR&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">1</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PP&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">2</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;PB&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">3</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">update_calc</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">calc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">update_md</span><span class="p">():</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;dc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">dc</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;hc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">hc</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;bc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">bc</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;tc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;ac&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">ac</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+            <span class="n">_his_data</span><span class="p">[</span><span class="s2">&quot;Vc&quot;</span><span class="p">][</span><span class="n">ti</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">volume</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_dates</span><span class="p">),</span> <span class="mi">1</span><span class="p">))[</span>
+                <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_stations</span>
+            <span class="p">]</span>
+
+        <span class="n">conditions_funct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">lme</span><span class="o">=</span><span class="n">update_lme</span><span class="p">,</span>
+            <span class="n">fme</span><span class="o">=</span><span class="n">update_fme</span><span class="p">,</span>
+            <span class="n">tme</span><span class="o">=</span><span class="n">update_tme</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">=</span><span class="n">update_pd</span><span class="p">,</span>
+            <span class="n">ps</span><span class="o">=</span><span class="n">update_ps</span><span class="p">,</span>
+            <span class="n">calc</span><span class="o">=</span><span class="n">update_calc</span><span class="p">,</span>
+            <span class="n">md</span><span class="o">=</span><span class="n">update_md</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">v_func</span> <span class="ow">in</span> <span class="n">conditions_funct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_params</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">v_func</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.output.output_model.MapOutput" class="doc doc-heading">
+        <code>MapOutput</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.output.output_model.MapOutput" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Object representing a Map output. Implements the 'OutputProtocol'.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_model.MapOutput.initialize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_model.MapOutput.initialize" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initiate mapping output file in which annual output covering the whole model domain is stored.</p>
+<p>:param coral: coral animal
+:type coral: Coral</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initiate mapping output file in which annual output covering the whole model domain is stored.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_output</span><span class="p">():</span>
+        <span class="k">return</span>
+    <span class="c1"># Open netcdf data and initialize needed variables.</span>
+    <span class="k">with</span> <span class="n">Dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_filepath</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;NETCDF4&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">_map_data</span><span class="p">:</span>
+        <span class="n">_map_data</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Mapped simulation data of the CoralModel.&quot;</span>
+
+        <span class="c1"># dimensions</span>
+        <span class="n">_map_data</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">_map_data</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)</span>
+
+        <span class="c1"># variables</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,))</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;year&quot;</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;years since 0 B.C.&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;nmesh2d_x&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">,))</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;x-coordinate&quot;</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;nmesh2d_y&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">,))</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;y-coordinate&quot;</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+
+        <span class="n">t</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_year</span>
+        <span class="n">x</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xy_coordinates</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">y</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xy_coordinates</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># initial conditions</span>
+        <span class="c1"># Definition of methods to initialize the netcdf variables.</span>
+        <span class="k">def</span> <span class="nf">init_lme</span><span class="p">():</span>
+            <span class="n">light_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Iz&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">light_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual mean representative light-intensity&quot;</span>
+            <span class="n">light_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;micro-mol photons m-2 s-1&quot;</span>
+            <span class="n">light_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_fme</span><span class="p">():</span>
+            <span class="n">flow_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;ucm&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">flow_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual mean in-canopy flow&quot;</span>
+            <span class="n">flow_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m s-1&quot;</span>
+            <span class="n">flow_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_tme</span><span class="p">():</span>
+            <span class="n">temp_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Tc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual mean coral temperature&quot;</span>
+            <span class="n">temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+            <span class="n">temp_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">low_temp_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Tlo&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">low_temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual mean lower thermal limit&quot;</span>
+            <span class="n">low_temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+            <span class="n">low_temp_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">high_temp_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;Thi&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">high_temp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual mean upper thermal limit&quot;</span>
+            <span class="n">high_temp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span>
+            <span class="n">high_temp_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_pd</span><span class="p">():</span>
+            <span class="n">pd_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PD&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">pd_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual sum photosynthetic rate&quot;</span>
+            <span class="n">pd_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">pd_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_ps</span><span class="p">():</span>
+            <span class="n">pt_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">pt_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;total living coral population at the end of the year&quot;</span>
+            <span class="p">)</span>
+            <span class="n">pt_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">pt_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">living_cover</span>
+
+            <span class="n">ph_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PH&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">ph_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;healthy coral population at the end of the year&quot;</span>
+            <span class="n">ph_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">ph_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">living_cover</span>
+
+            <span class="n">pr_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PR&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">pr_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;recovering coral population at the end of the year&quot;</span>
+            <span class="n">pr_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">pr_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">pp_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PP&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">pp_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;pale coral population at the end of the year&quot;</span>
+            <span class="n">pp_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">pp_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">pb_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;PB&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">pb_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;bleached coral population at the end of the year&quot;</span>
+            <span class="n">pb_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+            <span class="n">pb_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_calc</span><span class="p">():</span>
+            <span class="n">calc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
+                <span class="s2">&quot;calc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">calc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;annual sum calcification rate&quot;</span>
+            <span class="n">calc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;kg m-2 yr-1&quot;</span>
+            <span class="n">calc_set</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">init_md</span><span class="p">():</span>
+            <span class="n">dc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;dc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">dc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral plate diameter&quot;</span>
+            <span class="n">dc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+            <span class="n">dc_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">dc</span>
+
+            <span class="n">hc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;hc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">hc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral height&quot;</span>
+            <span class="n">hc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+            <span class="n">hc_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">hc</span>
+
+            <span class="n">bc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;bc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">bc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral base diameter&quot;</span>
+            <span class="n">bc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+            <span class="n">bc_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">bc</span>
+
+            <span class="n">tc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;tc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">tc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral plate thickness&quot;</span>
+            <span class="n">tc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+            <span class="n">tc_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">tc</span>
+
+            <span class="n">ac_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;ac&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">ac_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral axial distance&quot;</span>
+            <span class="n">ac_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span>
+            <span class="n">ac_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">ac</span>
+
+            <span class="n">vc_set</span> <span class="o">=</span> <span class="n">_map_data</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;Vc&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;nmesh2d_face&quot;</span><span class="p">))</span>
+            <span class="n">vc_set</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;coral volume&quot;</span>
+            <span class="n">vc_set</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m3&quot;</span>
+            <span class="n">vc_set</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">volume</span>
+
+        <span class="n">conditions_funct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">lme</span><span class="o">=</span><span class="n">init_lme</span><span class="p">,</span>
+            <span class="n">fme</span><span class="o">=</span><span class="n">init_fme</span><span class="p">,</span>
+            <span class="n">tme</span><span class="o">=</span><span class="n">init_tme</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">=</span><span class="n">init_pd</span><span class="p">,</span>
+            <span class="n">ps</span><span class="o">=</span><span class="n">init_ps</span><span class="p">,</span>
+            <span class="n">calc</span><span class="o">=</span><span class="n">init_calc</span><span class="p">,</span>
+            <span class="n">md</span><span class="o">=</span><span class="n">init_md</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">v_func</span> <span class="ow">in</span> <span class="n">conditions_funct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_params</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">v_func</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.output.output_model.MapOutput.space" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">space</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.output.output_model.MapOutput.space" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the total space for the model-defined xy-coordinates.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>int: length of 'xy_coordinates'.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.output.output_model.MapOutput.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+
+<a href="#src.core.output.output_model.MapOutput.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Write data as annual output covering the whole model domain.</p>
+<p>:param coral: coral animal
+:param year: simulation year</p>
+<p>:type coral: Coral
+:type year: int</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/output/output_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Write data as annual output covering the whole model domain.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :param year: simulation year</span>
+
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    :type year: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_output</span><span class="p">():</span>
+        <span class="k">return</span>
+    <span class="k">with</span> <span class="n">Dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_filepath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">_map_data</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_year</span><span class="p">)</span>
+        <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span>
+
+        <span class="k">def</span> <span class="nf">update_lme</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;Iz&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">light</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">update_fme</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;ucm&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">ucm</span>
+
+        <span class="k">def</span> <span class="nf">update_tme</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;Tc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">temp</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;Tlo&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataReshape</span><span class="o">.</span><span class="n">variable2array</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span>
+                <span class="k">else</span> <span class="n">coral</span><span class="o">.</span><span class="n">Tlo</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;Thi&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">coral</span><span class="o">.</span><span class="n">Thi</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataReshape</span><span class="o">.</span><span class="n">variable2array</span><span class="p">(</span><span class="n">coral</span><span class="o">.</span><span class="n">Thi</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span>
+                <span class="k">else</span> <span class="n">coral</span><span class="o">.</span><span class="n">Thi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">update_pd</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PD&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">photo_rate</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">update_ps</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PT&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PH&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PR&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PP&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;PB&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">pop_states</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">update_calc</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;calc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">update_md</span><span class="p">():</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;dc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">dc</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;hc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">hc</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;bc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">bc</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;tc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">tc</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;ac&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">ac</span>
+            <span class="n">_map_data</span><span class="p">[</span><span class="s2">&quot;Vc&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">coral</span><span class="o">.</span><span class="n">volume</span>
+
+        <span class="n">conditions_funct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">lme</span><span class="o">=</span><span class="n">update_lme</span><span class="p">,</span>
+            <span class="n">fme</span><span class="o">=</span><span class="n">update_fme</span><span class="p">,</span>
+            <span class="n">tme</span><span class="o">=</span><span class="n">update_tme</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">=</span><span class="n">update_pd</span><span class="p">,</span>
+            <span class="n">ps</span><span class="o">=</span><span class="n">update_ps</span><span class="p">,</span>
+            <span class="n">calc</span><span class="o">=</span><span class="n">update_calc</span><span class="p">,</span>
+            <span class="n">md</span><span class="o">=</span><span class="n">update_md</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">v_func</span> <span class="ow">in</span> <span class="n">conditions_funct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_params</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">v_func</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../hydrodynamics/hydromodels/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hydromodels" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Hydromodels
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../simulation/simulation/" class="md-footer__link md-footer__link--next" aria-label="Next: Simulation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Simulation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Deltares
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Deltares/NBSDynamics" target="_blank" rel="noopener" title="Source code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>

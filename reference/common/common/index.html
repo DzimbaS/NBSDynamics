@@ -1,0 +1,3665 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Common - NBSDynamics documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#common-classes-for-the-nbsdynamics-package" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="NBSDynamics documentation" class="md-header__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NBSDynamics documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Common
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      NBSDynamics documentation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../changelog/" class="md-tabs__link">
+      Changelog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guides/contribute/" class="md-tabs__link">
+        Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../core/" class="md-tabs__link md-tabs__link--active">
+        Reference
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NBSDynamics documentation" class="md-nav__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    NBSDynamics documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        NBSDynamics documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/contribute/" class="md-nav__link">
+        How to contribute to NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/run_simulation/" class="md-nav__link">
+        How to run a simulation in NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Bio process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bio process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Bio process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bio_process/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Common
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-classes-for-the-nbsdynamics-package" class="md-nav__link">
+    Common classes for the NBSDynamics package.
+  </a>
+  
+    <nav class="md-nav" aria-label="Common classes for the NBSDynamics package.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.check_processes" class="md-nav__link">
+    check_processes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.correct_values" class="md-nav__link">
+    correct_values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.from_input_file" class="md-nav__link">
+    from_input_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.validate_scientific_int_value" class="md-nav__link">
+    validate_scientific_int_value()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.check_dates" class="md-nav__link">
+    check_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.get_dates" class="md-nav__link">
+    get_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.prevalidate_dates" class="md-nav__link">
+    prevalidate_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.set_dates" class="md-nav__link">
+    set_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.set_parameter_values" class="md-nav__link">
+    set_parameter_values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_celsius" class="md-nav__link">
+    temp_celsius
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_kelvin" class="md-nav__link">
+    temp_kelvin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_mmm" class="md-nav__link">
+    temp_mmm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.validate_dataframe_or_path" class="md-nav__link">
+    validate_dataframe_or_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.validate_storm_category" class="md-nav__link">
+    validate_storm_category()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacetime" class="md-nav__link">
+    SpaceTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape" class="md-nav__link">
+    DataReshape
+  </a>
+  
+    <nav class="md-nav" aria-label="DataReshape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.dimension_value" class="md-nav__link">
+    dimension_value()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.matrix2array" class="md-nav__link">
+    matrix2array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.variable2array" class="md-nav__link">
+    variable2array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.variable2matrix" class="md-nav__link">
+    variable2matrix()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime" class="md-nav__link">
+    SpaceTime
+  </a>
+  
+    <nav class="md-nav" aria-label="SpaceTime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.set_coral_only" class="md-nav__link">
+    set_coral_only()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.spacetime" class="md-nav__link">
+    spacetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.time" class="md-nav__link">
+    time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.time_series_year" class="md-nav__link">
+    time_series_year()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singletons" class="md-nav__link">
+    Singletons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.RESHAPE" class="md-nav__link">
+    RESHAPE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.Singleton" class="md-nav__link">
+    Singleton
+  </a>
+  
+    <nav class="md-nav" aria-label="Singleton">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.Singleton.__new__" class="md-nav__link">
+    __new__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Coral
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Coral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Coral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coral/coral/" class="md-nav__link">
+        Coral
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Hydrodynamics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hydrodynamics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hydrodynamics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydrodynamics/hydromodels/" class="md-nav__link">
+        Hydromodels
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Output
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Output" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Output
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../output/output/" class="md-nav__link">
+        Output
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Simulation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simulation/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-classes-for-the-nbsdynamics-package" class="md-nav__link">
+    Common classes for the NBSDynamics package.
+  </a>
+  
+    <nav class="md-nav" aria-label="Common classes for the NBSDynamics package.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.check_processes" class="md-nav__link">
+    check_processes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.correct_values" class="md-nav__link">
+    correct_values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.from_input_file" class="md-nav__link">
+    from_input_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.constants.Constants.validate_scientific_int_value" class="md-nav__link">
+    validate_scientific_int_value()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.check_dates" class="md-nav__link">
+    check_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.get_dates" class="md-nav__link">
+    get_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.prevalidate_dates" class="md-nav__link">
+    prevalidate_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.set_dates" class="md-nav__link">
+    set_dates()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.set_parameter_values" class="md-nav__link">
+    set_parameter_values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_celsius" class="md-nav__link">
+    temp_celsius
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_kelvin" class="md-nav__link">
+    temp_kelvin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.temp_mmm" class="md-nav__link">
+    temp_mmm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.validate_dataframe_or_path" class="md-nav__link">
+    validate_dataframe_or_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.environment.Environment.validate_storm_category" class="md-nav__link">
+    validate_storm_category()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacetime" class="md-nav__link">
+    SpaceTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape" class="md-nav__link">
+    DataReshape
+  </a>
+  
+    <nav class="md-nav" aria-label="DataReshape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.dimension_value" class="md-nav__link">
+    dimension_value()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.matrix2array" class="md-nav__link">
+    matrix2array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.variable2array" class="md-nav__link">
+    variable2array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.DataReshape.variable2matrix" class="md-nav__link">
+    variable2matrix()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime" class="md-nav__link">
+    SpaceTime
+  </a>
+  
+    <nav class="md-nav" aria-label="SpaceTime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.set_coral_only" class="md-nav__link">
+    set_coral_only()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.spacetime" class="md-nav__link">
+    spacetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.SpaceTime.time" class="md-nav__link">
+    time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.space_time.time_series_year" class="md-nav__link">
+    time_series_year()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singletons" class="md-nav__link">
+    Singletons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.RESHAPE" class="md-nav__link">
+    RESHAPE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.Singleton" class="md-nav__link">
+    Singleton
+  </a>
+  
+    <nav class="md-nav" aria-label="Singleton">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.common.singletons.Singleton.__new__" class="md-nav__link">
+    __new__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Deltares/NBSDynamics/edit/master/docs/reference/common/common.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Common</h1>
+                
+                <h2 id="common-classes-for-the-nbsdynamics-package">Common classes for the NBSDynamics package.<a class="headerlink" href="#common-classes-for-the-nbsdynamics-package" title="Permanent link">&para;</a></h2>
+<h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.constants.Constants" class="doc doc-heading">
+        <code>Constants</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.common.constants.Constants" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Object containing all constants used in coral_model simulations.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.constants.Constants.check_processes" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_processes</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.constants.Constants.check_processes" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Validates the input values so that the processes are compatible between themselves.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>values</code></td>
+        <td><code>dict</code></td>
+        <td><p>Dictionary of values already validated individually.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>dict: Dictionary of validated values as a whole.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/constants.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@root_validator</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">check_processes</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validates the input values so that the processes are compatible between themselves.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        values (dict): Dictionary of values already validated individually.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Dictionary of validated values as a whole.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;pfd&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;fme&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;warn_proc&quot;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="s2">&quot;WARNING: Flow micro-environment (FME) not possible &quot;</span>
+                <span class="s2">&quot;when photosynthetic flow dependency (PFD) is disabled.&quot;</span>
+            <span class="p">)</span>
+        <span class="n">values</span><span class="p">[</span><span class="s2">&quot;fme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">values</span><span class="p">[</span><span class="s2">&quot;tme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;fme&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;tme&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;warn_proc&quot;</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="s2">&quot;WARNING: Thermal micro-environment (TME) not possible &quot;</span>
+                    <span class="s2">&quot;when flow micro-environment is disabled.&quot;</span>
+                <span class="p">)</span>
+            <span class="n">values</span><span class="p">[</span><span class="s2">&quot;tme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;tme&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;warn_proc&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Thermal micro-environment not fully implemented yet.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;pfd&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;warn_proc&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;WARNING: Exclusion of photosynthetic flow dependency not fully implemented yet.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">values</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.constants.Constants.correct_values" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">correct_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.constants.Constants.correct_values" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Corrects values that require extra operations, such as theta_max and prop_space.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/constants.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">correct_values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Corrects values that require extra operations, such as theta_max and prop_space.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">theta_max</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">prop_space</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.constants.Constants.from_input_file" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_input_file</span><span class="p">(</span><span class="n">input_file</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.constants.Constants.from_input_file" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Generates a 'Constants' class based on the defined parameters in the input_file.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>input_file</code></td>
+        <td><code>Path</code></td>
+        <td><p>Path to the constants input (.txt) file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/constants.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_input_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_file</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generates a &#39;Constants&#39; class based on the defined parameters in the input_file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_file (Path): Path to the constants input (.txt) file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">split_line</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">s_line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_line</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span>
+        <span class="k">return</span> <span class="n">s_line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">s_line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">format_line</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">split_line</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">normalize_line</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">input_lines</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">format_line</span><span class="p">(</span><span class="n">n_line</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">input_file</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">n_line</span> <span class="o">:=</span> <span class="n">normalize_line</span><span class="p">(</span><span class="n">line</span><span class="p">))</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">cls_constants</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">input_lines</span><span class="p">))</span>
+    <span class="n">cls_constants</span><span class="o">.</span><span class="n">correct_values</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">cls_constants</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.constants.Constants.validate_scientific_int_value" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_scientific_int_value</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.constants.Constants.validate_scientific_int_value" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Validates the parameters that can be provided with scientific notation.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>v</code></td>
+        <td><code>Any</code></td>
+        <td><p>Scientific value to validate.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>int: Validated value as integer.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/constants.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;maxiter_k&quot;</span><span class="p">,</span> <span class="s2">&quot;maxiter_aw&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">validate_scientific_int_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validates the parameters that can be provided with scientific notation.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        v (Any): Scientific value to validate.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: Validated value as integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No converter available for </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+      <p>coral_mostoel - environment</p>
+<p>@author: Gijs G. Hendrickx
+@contributor: Peter M.J. Herman</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.environment.Environment" class="doc doc-heading">
+        <code>Environment</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.check_dates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_dates</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.check_dates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Validates the dates value (post-process).</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>v</code></td>
+        <td><code>Optional[pandas.core.frame.DataFrame]</code></td>
+        <td><p>Value pre-validated for dates (if any).</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>values</code></td>
+        <td><code>dict</code></td>
+        <td><p>Dictionary containing the rest of values given to initialize 'Environment'.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Validated dates value.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;dates&quot;</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">check_dates</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validates the dates value (post-process).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        v (Optional[pd.DataFrame]): Value pre-validated for dates (if any).</span>
+<span class="sd">        values (dict): Dictionary containing the rest of values given to initialize &#39;Environment&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Validated dates value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Validate dates have values.</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+    <span class="n">light_value</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">light_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># TODO: Check column name of light-file</span>
+        <span class="k">return</span> <span class="n">light_value</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">temp_value</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">temp_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">temp_value</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;sst&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.get_dates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_dates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">]</span></code>
+
+
+<a href="#src.core.common.environment.Environment.get_dates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Just a shortcut being used in some occasions to get the datetime series array.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>When no dates could be set for the 'Environment'.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Iterable[datetime.datetime]</code></td>
+      <td><p>pd.Series[datetime]: Collection of timeseries stored in Environment.dates</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_dates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">datetime</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Just a shortcut being used in some occasions to get the datetime series array.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: When no dates could be set for the &#39;Environment&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.Series[datetime]: Collection of timeseries stored in Environment.dates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dates</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No values were assigned to dates.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dates</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.prevalidate_dates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">prevalidate_dates</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.prevalidate_dates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Prevalidates the the input value given for the 'dates' parameter transforming it
+into a valid 'Environment' attribute.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>Union[pandas.core.frame.DataFrame, Iterable[Union[str, datetime.datetime]]]</code></td>
+        <td><p>Value assigned to the attribute.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the provided value is not supported.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Validated value.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;dates&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">prevalidate_dates</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="p">]]]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prevalidates the the input value given for the &#39;dates&#39; parameter transforming it</span>
+<span class="sd">    into a valid &#39;Environment&#39; attribute.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (Union[pd.DataFrame, Iterable[Union[str, datetime]]]): Value assigned to the attribute.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the provided value is not supported.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Validated value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_dates_dataframe</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validator not available for type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.set_dates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_dates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">],</span> <span class="n">end_date</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">])</span></code>
+
+
+<a href="#src.core.common.environment.Environment.set_dates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Set dates manually, ignoring possible dates in environmental time-series.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>start_date</code></td>
+        <td><code>Union[str, datetime.datetime]</code></td>
+        <td><p>Start of the range dates.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>end_date</code></td>
+        <td><code>Union[str, datetime.datetime]</code></td>
+        <td><p>End of the range dates.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_dates</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="p">],</span> <span class="n">end_date</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">datetime</span><span class="p">]</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set dates manually, ignoring possible dates in environmental time-series.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start_date (Union[str, datetime]): Start of the range dates.</span>
+<span class="sd">        end_date (Union[str, datetime]): End of the range dates.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">dates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_dates_dataframe</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.set_parameter_values" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_parameter_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">pre_date</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.environment.Environment.set_parameter_values" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Set the time-series data to a time-series, or a  value. In case :param value: is not iterable, the
+:param parameter: is assumed to be constant over time. In case :param value: is iterable, make sure its length
+complies with the simulation length.</p>
+<p>Included parameters:
+    light                       :   incoming light-intensity [umol photons m-2 s-1]
+    LAC / light_attenuation     :   light attenuation coefficient [m-1]
+    temperature                 :   sea surface temperature [K]
+    aragonite                   :   aragonite saturation state [-]
+    storm                       :   storm category, annually [-]</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>parameter</code></td>
+        <td><code>str</code></td>
+        <td><p>Parameter to be set.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>Union[float, list, tuple, numpy.ndarray, pandas.core.frame.DataFrame]</code></td>
+        <td><p>New value for the parameter.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>pre_date</code></td>
+        <td><code>Optional[int]</code></td>
+        <td><p>Time-series start before simulation dates [yrs]. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_parameter_values</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">EnvironmentValue</span><span class="p">,</span> <span class="n">pre_date</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set the time-series data to a time-series, or a  value. In case :param value: is not iterable, the</span>
+<span class="sd">    :param parameter: is assumed to be constant over time. In case :param value: is iterable, make sure its length</span>
+<span class="sd">    complies with the simulation length.</span>
+
+<span class="sd">    Included parameters:</span>
+<span class="sd">        light                       :   incoming light-intensity [umol photons m-2 s-1]</span>
+<span class="sd">        LAC / light_attenuation     :   light attenuation coefficient [m-1]</span>
+<span class="sd">        temperature                 :   sea surface temperature [K]</span>
+<span class="sd">        aragonite                   :   aragonite saturation state [-]</span>
+<span class="sd">        storm                       :   storm category, annually [-]</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        parameter (str): Parameter to be set.</span>
+<span class="sd">        value (EnvironmentValue): New value for the parameter.</span>
+<span class="sd">        pre_date (Optional[int], optional): Time-series start before simulation dates [yrs]. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Function to set  value.&quot;&quot;&quot;</span>
+        <span class="n">simple_dates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_dates</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">pre_date</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">parameter</span><span class="p">:</span> <span class="n">val</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">simple_dates</span><span class="p">)</span>
+
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span>
+            <span class="n">simple_dates</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">years</span><span class="o">=</span><span class="n">pre_date</span><span class="p">),</span>
+            <span class="n">simple_dates</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">parameter</span><span class="p">:</span> <span class="n">val</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dates</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;No dates are defined. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Please, first specify the dates before setting the time-series of </span><span class="si">{</span><span class="n">parameter</span><span class="si">}</span><span class="s2">; &quot;</span>
+            <span class="sa">f</span><span class="s1">&#39;or make use of the &quot;from_file&quot;-method.&#39;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">parameter</span> <span class="o">==</span> <span class="s2">&quot;LAC&quot;</span><span class="p">:</span>
+        <span class="n">parameter</span> <span class="o">=</span> <span class="s2">&quot;light_attenuation&quot;</span>
+
+    <span class="n">daily_params</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="s2">&quot;light_attenuation&quot;</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;aragonite&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">daily_params</span><span class="p">:</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">set_value</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">parameter</span> <span class="o">==</span> <span class="s2">&quot;storm&quot;</span><span class="p">:</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_dates</span><span class="p">()</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storm_category</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Entered parameter (</span><span class="si">{</span><span class="n">parameter</span><span class="si">}</span><span class="s2">) not included. See documentation.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.environment.Environment.temp_celsius" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">temp_celsius</span><span class="p">:</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.temp_celsius" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the temperature property in Celsius.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: value representation.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.environment.Environment.temp_kelvin" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">temp_kelvin</span><span class="p">:</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.temp_kelvin" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the temperature property in Kelvin.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: value representation.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.environment.Environment.temp_mmm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">temp_mmm</span><span class="p">:</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.temp_mmm" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Temperature in Monthly mean.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: value as a pandas DataFrame.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.validate_dataframe_or_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_dataframe_or_path</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.validate_dataframe_or_path" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Transforms an input into the expected type for the parameter. In case a file it's provided
+it's content is converted into a pandas DataFrame.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>Union[pandas.core.frame.DataFrame, pathlib.Path, str]</code></td>
+        <td><p>Value to be validated (Union[pd.DataFrame, Path, str]).</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>FileNotFoundError</code></td>
+        <td><p>When the provided value is a non-existent Path.</p></td>
+      </tr>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the provided value is not supported.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Validated attribute value.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="s2">&quot;light_attenuation&quot;</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;aragonite&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">validate_dataframe_or_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">EnvInputAttr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms an input into the expected type for the parameter. In case a file it&#39;s provided</span>
+<span class="sd">    it&#39;s content is converted into a pandas DataFrame.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (EnvInputAttr): Value to be validated (Union[pd.DataFrame, Path, str]).</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        FileNotFoundError: When the provided value is a non-existent Path.</span>
+<span class="sd">        NotImplementedError: When the provided value is not supported.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Validated attribute value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">read_index</span><span class="p">(</span><span class="n">value_file</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Function applicable to time-series in Pandas.&quot;&quot;&quot;</span>
+        <span class="n">time_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">value_file</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">time_series</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;NaNs detected in time series </span><span class="si">{</span><span class="n">value_file</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">time_series</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">time_series</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+        <span class="n">time_series</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">time_series</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">read_index</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validator not available for type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.environment.Environment.validate_storm_category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_storm_category</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.common.environment.Environment.validate_storm_category" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Transforms the input value given for the 'storm_category' parameter
+into a valid 'Environment' attribute.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>Union[pandas.core.frame.DataFrame, pathlib.Path, str]</code></td>
+        <td><p>Value assigned to the attribute (Union[pd.DataFrame, Path, str]).</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>FileNotFoundError</code></td>
+        <td><p>When the provided value is a non-existent Path.</p></td>
+      </tr>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the provided value is not supported.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Validated value.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/environment.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;storm_category&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">validate_storm_category</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">EnvInputAttr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms the input value given for the &#39;storm_category&#39; parameter</span>
+<span class="sd">    into a valid &#39;Environment&#39; attribute.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (EnvInputAttr): Value assigned to the attribute (Union[pd.DataFrame, Path, str]).</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        FileNotFoundError: When the provided value is a non-existent Path.</span>
+<span class="sd">        NotImplementedError: When the provided value is not supported.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Validated value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">csv_values</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">csv_values</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">csv_values</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validator not available for type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="spacetime">SpaceTime<a class="headerlink" href="#spacetime" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+      <p>coral_model - utils</p>
+<p>@author: Gijs G. Hendrickx
+@contributor: Peter M.J. Herman</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.space_time.DataReshape" class="doc doc-heading">
+        <code>DataReshape</code>
+
+
+
+<a href="#src.core.common.space_time.DataReshape" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Reshape data to create a spacetime matrix.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.DataReshape.dimension_value" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">dimension_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.space_time.DataReshape.dimension_value" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check consistency between variable's dimensions and the defined spacetime dimensions.</p>
+<p>:param variable: variable to be checked
+:param dimension: dimension under consideration</p>
+<p>:type variable: list, tuple, numpy.ndarray
+:type dimension: str</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dimension_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check consistency between variable&#39;s dimensions and the defined spacetime dimensions.</span>
+
+<span class="sd">    :param variable: variable to be checked</span>
+<span class="sd">    :param dimension: dimension under consideration</span>
+
+<span class="sd">    :type variable: list, tuple, numpy.ndarray</span>
+<span class="sd">    :type dimension: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="p">[</span><span class="n">variable</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dimension</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Incorrect variable size, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span><span class="si">}</span><span class="s2"> =/= </span><span class="si">{</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dimension</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.DataReshape.matrix2array" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">matrix2array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">:</span> <span class="n">ndarray</span><span class="p">,</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">conversion</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.space_time.DataReshape.matrix2array" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Transform matrix to array.</p>
+<p>:param matrix: variable as matrix in spacetime
+:param dimension: dimension to convert matrix to
+:param conversion: how to convert the matrix to an array, defaults to None
+    None    :   take the last value
+    'mean'  :   take the mean value
+    'max'   :   take the maximum value
+    'min'   :   take the minimum value
+    'sum'   :   take the summation</p>
+<p>:type matrix: numpy.ndarray
+:type dimension: str
+:type conversion: None, str, optional</p>
+<p>:return: variable as array
+:rtype: numpy.ndarray</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">matrix2array</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">conversion</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform matrix to array.</span>
+
+<span class="sd">    :param matrix: variable as matrix in spacetime</span>
+<span class="sd">    :param dimension: dimension to convert matrix to</span>
+<span class="sd">    :param conversion: how to convert the matrix to an array, defaults to None</span>
+<span class="sd">        None    :   take the last value</span>
+<span class="sd">        &#39;mean&#39;  :   take the mean value</span>
+<span class="sd">        &#39;max&#39;   :   take the maximum value</span>
+<span class="sd">        &#39;min&#39;   :   take the minimum value</span>
+<span class="sd">        &#39;sum&#39;   :   take the summation</span>
+
+<span class="sd">    :type matrix: numpy.ndarray</span>
+<span class="sd">    :type dimension: str</span>
+<span class="sd">    :type conversion: None, str, optional</span>
+
+<span class="sd">    :return: variable as array</span>
+<span class="sd">    :rtype: numpy.ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># # input check</span>
+    <span class="c1"># dimension-type</span>
+    <span class="n">dimensions</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;space&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dimension</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dimensions</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dimension</span><span class="si">}</span><span class="s2"> not in </span><span class="si">{</span><span class="n">dimensions</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># input as numpy.array</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+    <span class="c1"># dimension-value</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="ow">not</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span>
+        <span class="ow">and</span> <span class="ow">not</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span>
+    <span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Matrix-shape does not correspond with spacetime-dimensions:&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> =/= </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># conversion-strategy</span>
+    <span class="n">conversions</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">conversion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">conversions</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">conversion</span><span class="si">}</span><span class="s2"> not in </span><span class="si">{</span><span class="n">conversions</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># # transformation</span>
+    <span class="c1"># last position</span>
+    <span class="k">if</span> <span class="n">conversion</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;space&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;time&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">matrix</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="c1"># conversion</span>
+    <span class="k">if</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;space&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">conversion</span><span class="p">)(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;time&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">conversion</span><span class="p">)(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.DataReshape.variable2array" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">variable2array</span><span class="p">(</span><span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.DataReshape.variable2array" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>"Transform variable to numpy.array (if float or string).</p>
+<p>:param variable: variable to be transformed
+:type variable: float, int, list, numpy.ndarray</p>
+<p>:return: variable as array
+:rtype: numpy.ndarray</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">variable2array</span><span class="p">(</span><span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot; &quot;Transform variable to numpy.array (if float or string).</span>
+
+<span class="sd">    :param variable: variable to be transformed</span>
+<span class="sd">    :type variable: float, int, list, numpy.ndarray</span>
+
+<span class="sd">    :return: variable as array</span>
+<span class="sd">    :rtype: numpy.ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Variable cannot be of </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">variable</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">variable</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">variable</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">variable</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.DataReshape.variable2matrix" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">variable2matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.space_time.DataReshape.variable2matrix" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Transform variable to matrix.</p>
+<p>:param variable: variable to be transformed
+:param dimension: dimension of :param variable:</p>
+<p>:type variable: float, int, list, tuple, numpy.ndarray
+:type dimension: str</p>
+<p>:return: variable as matrix in space-time
+:rtype: numpy.ndarray</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">variable2matrix</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform variable to matrix.</span>
+
+<span class="sd">    :param variable: variable to be transformed</span>
+<span class="sd">    :param dimension: dimension of :param variable:</span>
+
+<span class="sd">    :type variable: float, int, list, tuple, numpy.ndarray</span>
+<span class="sd">    :type dimension: str</span>
+
+<span class="sd">    :return: variable as matrix in space-time</span>
+<span class="sd">    :rtype: numpy.ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># # input check</span>
+    <span class="c1"># dimension-type</span>
+    <span class="n">dimensions</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;space&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dimension</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dimensions</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dimension</span><span class="si">}</span><span class="s2"> not in </span><span class="si">{</span><span class="n">dimensions</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># dimension-value</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">variable2array</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dimension_value</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">dimension</span><span class="p">)</span>
+
+    <span class="c1"># # transformation</span>
+    <span class="k">if</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;space&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">dimension</span> <span class="o">==</span> <span class="s2">&quot;time&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.space_time.SpaceTime" class="doc doc-heading">
+        <code>SpaceTime</code>
+
+
+
+<a href="#src.core.common.space_time.SpaceTime" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Spacetime-object, which validates the definition of the spacetime dimensions.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacetime</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>:param spacetime: spacetime dimensions, defaults to None
+:type spacetime: None, tuple, optional</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacetime</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param spacetime: spacetime dimensions, defaults to None</span>
+<span class="sd">    :type spacetime: None, tuple, optional</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spacetime</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span> <span class="o">=</span> <span class="n">spacetime</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_coral_only</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Development representation.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Development representation.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;SpaceTime(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__spacetime</span><span class="si">}</span><span class="s2">)&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.__str__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.__str__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Print representation.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print representation.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacetime</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.set_coral_only" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_coral_only</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacetime</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.space_time.SpaceTime.set_coral_only" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Automatically set the spacetime dimensions for the CoralOnly-class.</p>
+<p>:param spacetime: spacetime dimension
+:type spacetime: tuple</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_coral_only</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacetime</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Automatically set the spacetime dimensions for the CoralOnly-class.</span>
+
+<span class="sd">    :param spacetime: spacetime dimension</span>
+<span class="sd">    :type spacetime: tuple</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CoralOnly</span><span class="o">.</span><span class="n">spacetime</span> <span class="o">=</span> <span class="n">spacetime</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.space" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">space</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-writable"><code>writable</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.space" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Space dimension.</p>
+<p>:rtype: int</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.spacetime" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">spacetime</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-writable"><code>writable</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.spacetime" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Spacetime dimensions.</p>
+<p>:rtype: tuple</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.common.space_time.SpaceTime.time" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">time</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-writable"><code>writable</code></small>
+  </span>
+
+<a href="#src.core.common.space_time.SpaceTime.time" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Time dimension.</p>
+<p>:rtype: int</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="src.core.common.space_time.time_series_year" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">time_series_year</span><span class="p">(</span><span class="n">time_series</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+
+<a href="#src.core.common.space_time.time_series_year" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Extract a section of the time-series based on the year.</p>
+<p>:param time_series: time-series to be extracted
+:param year: year to be extracted</p>
+<p>:type time_series: pandas.DataFrame
+:type year: int</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/space_time.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">time_series_year</span><span class="p">(</span><span class="n">time_series</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract a section of the time-series based on the year.</span>
+
+<span class="sd">    :param time_series: time-series to be extracted</span>
+<span class="sd">    :param year: year to be extracted</span>
+
+<span class="sd">    :type time_series: pandas.DataFrame</span>
+<span class="sd">    :type year: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">time_series</span><span class="p">[</span><span class="n">time_series</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">transpose</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="singletons">Singletons<a class="headerlink" href="#singletons" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+      <p>This file is intended to contain all the common classes used as unique object
+throughout the <code>NBSDynamics</code> project.
+Although these classes are defined elsewhere, here we implement them as singletons.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.singletons.RESHAPE" class="doc doc-heading">
+        <code>RESHAPE</code>
+
+
+
+<a href="#src.core.common.singletons.RESHAPE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p><code>DataReshape</code> Singleton.</p>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.common.singletons.Singleton" class="doc doc-heading">
+        <code>Singleton</code>
+
+
+
+<a href="#src.core.common.singletons.Singleton" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Singleton class representing the design pattern.
+This class can be used for concepts that are not meant to change state during a simulation
+such as DataReshape, represented by RESHAPE.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.common.singletons.Singleton.__new__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.common.singletons.Singleton.__new__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Create and return a new object.  See help(type) for accurate signature.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/common/singletons.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span><span class="p">,</span> <span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../bio_process/processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Processes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../coral/coral/" class="md-footer__link md-footer__link--next" aria-label="Next: Coral" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Coral
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Deltares
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Deltares/NBSDynamics" target="_blank" rel="noopener" title="Source code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>

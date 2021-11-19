@@ -1,0 +1,5421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Hydromodels - NBSDynamics documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hydrodynamic-simulation-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="NBSDynamics documentation" class="md-header__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NBSDynamics documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hydromodels
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="deltares" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      NBSDynamics documentation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../changelog/" class="md-tabs__link">
+      Changelog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guides/contribute/" class="md-tabs__link">
+        Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../core/" class="md-tabs__link md-tabs__link--active">
+        Reference
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NBSDynamics documentation" class="md-nav__button md-logo" aria-label="NBSDynamics documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+
+    </a>
+    NBSDynamics documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Deltares/NBSDynamics/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deltares/nbsdynamics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        NBSDynamics documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/contribute/" class="md-nav__link">
+        How to contribute to NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/run_simulation/" class="md-nav__link">
+        How to run a simulation in NBSDynamics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Bio process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bio process" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Bio process
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bio_process/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/common/" class="md-nav__link">
+        Common
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Coral
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Coral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Coral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coral/coral/" class="md-nav__link">
+        Coral
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Hydrodynamics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hydrodynamics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hydrodynamics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hydromodels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Hydromodels
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hydrodynamic-simulation-models" class="md-nav__link">
+    Hydrodynamic simulation models.
+  </a>
+  
+    <nav class="md-nav" aria-label="Hydrodynamic simulation models.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factory" class="md-nav__link">
+    Factory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory" class="md-nav__link">
+    HydrodynamicsFactory
+  </a>
+  
+    <nav class="md-nav" aria-label="HydrodynamicsFactory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.create" class="md-nav__link">
+    create()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.get_hydrodynamic_model_type" class="md-nav__link">
+    get_hydrodynamic_model_type()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol" class="md-nav__link">
+    HydrodynamicProtocol
+  </a>
+  
+    <nav class="md-nav" aria-label="HydrodynamicProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.config_file" class="md-nav__link">
+    config_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.definition_file" class="md-nav__link">
+    definition_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.water_depth" class="md-nav__link">
+    water_depth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.x_coordinates" class="md-nav__link">
+    x_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.y_coordinates" class="md-nav__link">
+    y_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delft3d" class="md-nav__link">
+    Delft3D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D" class="md-nav__link">
+    Delft3D
+  </a>
+  
+    <nav class="md-nav" aria-label="Delft3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.cleanup_environment_variables" class="md-nav__link">
+    cleanup_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_max_hydrodynamics" class="md-nav__link">
+    get_max_hydrodynamics()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_mean_hydrodynamics" class="md-nav__link">
+    get_mean_hydrodynamics()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_variable" class="md-nav__link">
+    get_variable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check" class="md-nav__link">
+    input_check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check_definition" class="md-nav__link">
+    input_check_definition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.reset_counters" class="md-nav__link">
+    reset_counters()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_environment_variables" class="md-nav__link">
+    set_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_morphology" class="md-nav__link">
+    set_morphology()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_variable" class="md-nav__link">
+    set_variable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel" class="md-nav__link">
+    DimrModel
+  </a>
+  
+    <nav class="md-nav" aria-label="DimrModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.check_dll_path" class="md-nav__link">
+    check_dll_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel" class="md-nav__link">
+    FlowFmModel
+  </a>
+  
+    <nav class="md-nav" aria-label="FlowFmModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.check_dll_path" class="md-nav__link">
+    check_dll_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.water_depth" class="md-nav__link">
+    water_depth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.x_coordinates" class="md-nav__link">
+    x_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.y_coordinates" class="md-nav__link">
+    y_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transect" class="md-nav__link">
+    Transect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect" class="md-nav__link">
+    Transect
+  </a>
+  
+    <nav class="md-nav" aria-label="Transect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.input_check" class="md-nav__link">
+    input_check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.input_check_definition" class="md-nav__link">
+    input_check_definition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.reset_counters" class="md-nav__link">
+    reset_counters()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.set_morphology" class="md-nav__link">
+    set_morphology()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reef-0d" class="md-nav__link">
+    Reef 0D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D" class="md-nav__link">
+    Reef0D
+  </a>
+  
+    <nav class="md-nav" aria-label="Reef0D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reef-1d" class="md-nav__link">
+    Reef 1D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D" class="md-nav__link">
+    Reef1D
+  </a>
+  
+    <nav class="md-nav" aria-label="Reef1D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.dispersion" class="md-nav__link">
+    dispersion()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.wave_length" class="md-nav__link">
+    wave_length
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Output
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Output" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Output
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../output/output/" class="md-nav__link">
+        Output
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Simulation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simulation/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hydrodynamic-simulation-models" class="md-nav__link">
+    Hydrodynamic simulation models.
+  </a>
+  
+    <nav class="md-nav" aria-label="Hydrodynamic simulation models.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factory" class="md-nav__link">
+    Factory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory" class="md-nav__link">
+    HydrodynamicsFactory
+  </a>
+  
+    <nav class="md-nav" aria-label="HydrodynamicsFactory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.create" class="md-nav__link">
+    create()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.get_hydrodynamic_model_type" class="md-nav__link">
+    get_hydrodynamic_model_type()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol" class="md-nav__link">
+    HydrodynamicProtocol
+  </a>
+  
+    <nav class="md-nav" aria-label="HydrodynamicProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.config_file" class="md-nav__link">
+    config_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.definition_file" class="md-nav__link">
+    definition_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.water_depth" class="md-nav__link">
+    water_depth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.x_coordinates" class="md-nav__link">
+    x_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.y_coordinates" class="md-nav__link">
+    y_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delft3d" class="md-nav__link">
+    Delft3D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D" class="md-nav__link">
+    Delft3D
+  </a>
+  
+    <nav class="md-nav" aria-label="Delft3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.cleanup_environment_variables" class="md-nav__link">
+    cleanup_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_max_hydrodynamics" class="md-nav__link">
+    get_max_hydrodynamics()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_mean_hydrodynamics" class="md-nav__link">
+    get_mean_hydrodynamics()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.get_variable" class="md-nav__link">
+    get_variable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check" class="md-nav__link">
+    input_check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check_definition" class="md-nav__link">
+    input_check_definition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.reset_counters" class="md-nav__link">
+    reset_counters()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_environment_variables" class="md-nav__link">
+    set_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_morphology" class="md-nav__link">
+    set_morphology()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.set_variable" class="md-nav__link">
+    set_variable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.Delft3D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel" class="md-nav__link">
+    DimrModel
+  </a>
+  
+    <nav class="md-nav" aria-label="DimrModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.check_dll_path" class="md-nav__link">
+    check_dll_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.DimrModel.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel" class="md-nav__link">
+    FlowFmModel
+  </a>
+  
+    <nav class="md-nav" aria-label="FlowFmModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.check_dll_path" class="md-nav__link">
+    check_dll_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.configure_model_wrapper" class="md-nav__link">
+    configure_model_wrapper()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.get_environment_variables" class="md-nav__link">
+    get_environment_variables()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.water_depth" class="md-nav__link">
+    water_depth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.x_coordinates" class="md-nav__link">
+    x_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.delft3d.FlowFmModel.y_coordinates" class="md-nav__link">
+    y_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transect" class="md-nav__link">
+    Transect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect" class="md-nav__link">
+    Transect
+  </a>
+  
+    <nav class="md-nav" aria-label="Transect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.input_check" class="md-nav__link">
+    input_check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.input_check_definition" class="md-nav__link">
+    input_check_definition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.reset_counters" class="md-nav__link">
+    reset_counters()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.set_morphology" class="md-nav__link">
+    set_morphology()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.space" class="md-nav__link">
+    space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.transect.Transect.xy_coordinates" class="md-nav__link">
+    xy_coordinates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reef-0d" class="md-nav__link">
+    Reef 0D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D" class="md-nav__link">
+    Reef0D
+  </a>
+  
+    <nav class="md-nav" aria-label="Reef0D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_0d.Reef0D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reef-1d" class="md-nav__link">
+    Reef 1D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D" class="md-nav__link">
+    Reef1D
+  </a>
+  
+    <nav class="md-nav" aria-label="Reef1D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.dispersion" class="md-nav__link">
+    dispersion()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.finalise" class="md-nav__link">
+    finalise()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.initiate" class="md-nav__link">
+    initiate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.core.hydrodynamics.reef_1d.Reef1D.wave_length" class="md-nav__link">
+    wave_length
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Deltares/NBSDynamics/edit/master/docs/reference/hydrodynamics/hydromodels.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Hydromodels</h1>
+                
+                <h2 id="hydrodynamic-simulation-models">Hydrodynamic simulation models.<a class="headerlink" href="#hydrodynamic-simulation-models" title="Permanent link">&para;</a></h2>
+<h3 id="factory">Factory<a class="headerlink" href="#factory" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.factory.HydrodynamicsFactory" class="doc doc-heading">
+        <code>HydrodynamicsFactory</code>
+
+
+
+<a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Factory class to select hydrodynamic models.
+It also works as a binding model-protocol between the hydrodynamic models
+and the <code>HydrodynamicProtocol</code>.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.factory.HydrodynamicsFactory.create" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HydrodynamicProtocol</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.create" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Creates a <code>HydrodynamicProtocol</code> based on the model_name type and the dictionary of
+values (if any) given.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>model_name</code></td>
+        <td><code>str</code></td>
+        <td><p>Model type name.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HydrodynamicProtocol</code></td>
+      <td><p>HydrodynamicProtocol: Instance of the requested model.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/factory.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HydrodynamicProtocol</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a `HydrodynamicProtocol` based on the model_name type and the dictionary of</span>
+<span class="sd">    values (if any) given.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_name (str): Model type name.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HydrodynamicProtocol: Instance of the requested model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">m_type</span><span class="p">:</span> <span class="n">HydrodynamicProtocol</span> <span class="o">=</span> <span class="n">HydrodynamicsFactory</span><span class="o">.</span><span class="n">get_hydrodynamic_model_type</span><span class="p">(</span>
+        <span class="n">model_name</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">m_type</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.factory.HydrodynamicsFactory.get_hydrodynamic_model_type" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_hydrodynamic_model_type</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HydrodynamicProtocol</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.factory.HydrodynamicsFactory.get_hydrodynamic_model_type" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns the type associated with the given model name.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>model_name</code></td>
+        <td><code>str</code></td>
+        <td><p>Model name to retrieve.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>When the model name is not associated with a valid <code>HydrodynamicProtocol</code>.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HydrodynamicProtocol</code></td>
+      <td><p>HydrodynamicProtocol: The requested model type.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/factory.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">get_hydrodynamic_model_type</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HydrodynamicProtocol</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the type associated with the given model name.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_name (str): Model name to retrieve.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: When the model name is not associated with a valid `HydrodynamicProtocol`.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        HydrodynamicProtocol: The requested model type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nm_name</span> <span class="o">=</span> <span class="n">model_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">if</span> <span class="n">model_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">model_name</span>
+    <span class="n">hydromodel</span><span class="p">:</span> <span class="n">HydrodynamicProtocol</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">m_type</span>
+            <span class="k">for</span> <span class="n">m_type</span> <span class="ow">in</span> <span class="n">HydrodynamicsFactory</span><span class="o">.</span><span class="n">supported_modes</span>
+            <span class="k">if</span> <span class="n">m_type</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">nm_name</span>
+        <span class="p">),</span>
+        <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">hydromodel</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2"> not in </span><span class="si">{</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">HydrodynamicsFactory</span><span class="o">.</span><span class="n">supported_modes</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hydromodel</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="protocol">Protocol<a class="headerlink" href="#protocol" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol" class="doc doc-heading">
+        <code>HydrodynamicProtocol</code>
+
+
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Protocol describing the mandatory properties and methods to be implemented by any hydromodel.
+The binding between a model and the protocol is made at the factory level ('HydrodynamicsFactory').</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.config_file" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">config_file</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.config_file" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Configuration file for the model.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Path</code></td>
+      <td><p>Path: The path to the configuration file.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.definition_file" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definition_file</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.definition_file" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Model definition file, its format (extension) may vary per file.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Path</code></td>
+      <td><p>Path: The path to the definition file.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.finalise" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.finalise" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Finalizes the model.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/hydrodynamic_protocol.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finalizes the model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the model does not implement its own definition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.initiate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.initiate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initiates the working model.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/hydrodynamic_protocol.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initiates the working model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the model does not implement its own definition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.settings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">settings</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.settings" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Print settings of the hydrodynamic model.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>str: The settings as string representation.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.space" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">space</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.space" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Space-dimension</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>int: Value of the space-dimension.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">stormcat</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Updates the model with the given parameters.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>coral</code></td>
+        <td><code>Coral</code></td>
+        <td><p>Coral model to be used.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>stormcat</code></td>
+        <td><code>int</code></td>
+        <td><p>Category of storm to apply.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/hydrodynamic_protocol.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">stormcat</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Updates the model with the given parameters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coral (Coral): Coral model to be used.</span>
+<span class="sd">        stormcat (int): Category of storm to apply.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the model does not implement its own definition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.water_depth" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">water_depth</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.water_depth" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Water depth, retrieved from hydodynamic model; otherwise base on provided definitino.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>np.ndarray: Water depth value as numpy array.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.x_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">x_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.x_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The x-coordinates of the model domain.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>np.ndarray: X coordinates as numpy array.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.xy_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">xy_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.xy_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The (x,y)-coordinates of the model domain, retrieved from hydrodynamic model; otherwise based on provided definition.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>np.ndarray: X,Y coordinates as numpy array.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.y_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">y_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.hydrodynamic_protocol.HydrodynamicProtocol.y_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The y-coordinates of the model domain.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the model does not implement its own definition.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>np.ndarray: Y coordinates as numpy array.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="delft3d">Delft3D<a class="headerlink" href="#delft3d" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.delft3d.Delft3D" class="doc doc-heading">
+        <code>Delft3D</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Implements the <code>HydrodynamicProtocol</code>.
+Coupling of coral_model to Delft3D using the BMI wrapper.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return repr(self).</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;Delft3D()&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.cleanup_environment_variables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cleanup_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.cleanup_environment_variables" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Remove unnecessary environment variables from system.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cleanup_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Remove unnecessary environment variables from system.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">env_variables</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_environment_variables</span><span class="p">()</span>
+    <span class="n">env_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_sys_environment_key</span><span class="p">()</span>
+    <span class="c1"># Set variable</span>
+    <span class="n">path_var</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">env_key</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">env_var</span> <span class="ow">in</span> <span class="n">env_variables</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">env_var</span><span class="p">)</span> <span class="ow">in</span> <span class="n">path_var</span><span class="p">:</span>
+            <span class="n">path_var</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">env_var</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">env_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">path_var</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.configure_model_wrapper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.configure_model_wrapper" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Configures the model wrapper with the specifics of its type.</p>
+
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>NotImplementedError</code></td>
+        <td><p>When the concrete class does not define its own implementation.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Configures the model wrapper with the specifics of its type.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        NotImplementedError: When the concrete class does not define its own implementation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.finalise" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.finalise" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Finalize the working model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Finalize the working model.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">cleanup_environment_variables</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.get_environment_variables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.get_environment_variables" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the Python environment variables to include in a Delft3D model run.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the Python environment variables to include in a Delft3D model run.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Implement in concrete class&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.get_max_hydrodynamics" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_max_hydrodynamics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.get_max_hydrodynamics" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Get hydrodynamic results; max. values.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_max_hydrodynamics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get hydrodynamic results; max. values.&quot;&quot;&quot;</span>
+    <span class="n">current_vel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;is_maxvalsnd&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">),</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">wave_vel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;Uorb&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)]</span>
+    <span class="n">wave_per</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;twav&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">current_vel</span><span class="p">,</span> <span class="n">wave_vel</span><span class="p">,</span> <span class="n">wave_per</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.get_mean_hydrodynamics" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_mean_hydrodynamics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.get_mean_hydrodynamics" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Get hydrodynamic results; mean values.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_mean_hydrodynamics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get hydrodynamic results; mean values.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_step</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;is_dtint&quot;</span><span class="p">)</span>
+    <span class="n">current_vel</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;is_sumvalsnd&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">),</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_step</span>
+    <span class="p">)</span>
+    <span class="n">wave_vel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;Uorb&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)]</span>
+    <span class="n">wave_per</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;twav&quot;</span><span class="p">)[</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">space</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">current_vel</span><span class="p">,</span> <span class="n">wave_vel</span><span class="p">,</span> <span class="n">wave_per</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.get_variable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.get_variable" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Get variable from the model wrapper.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>variable</code></td>
+        <td><code>str</code></td>
+        <td><p>Variable to retrieve.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Union[float, list, tuple, numpy.ndarray]</code></td>
+      <td><p>Optional[WrapperVariable]: Value found.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WrapperVariable</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get variable from the model wrapper.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        variable (str): Variable to retrieve.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Optional[WrapperVariable]: Value found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="o">.</span><span class="n">get_var</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.initiate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.initiate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Creates a BMIWrapper and initializes it based on the given parameters for a FM Model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a BMIWrapper and initializes it based on the given parameters for a FM Model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_environment_variables</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">configure_model_wrapper</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.input_check" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">input_check</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check if all requested content is provided</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">input_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if all requested content is provided&quot;&quot;&quot;</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="s2">&quot;xy_coordinates&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="s2">&quot;water_depth&quot;</span><span class="p">)</span>
+
+    <span class="n">files</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mdu&quot;</span><span class="p">,)</span>
+    <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]</span>
+
+    <span class="n">interval_types</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;update_interval&quot;</span><span class="p">,</span> <span class="s2">&quot;update_interval_storm&quot;</span><span class="p">)</span>
+    <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span> <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">interval_types</span><span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.input_check_definition" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">input_check_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.input_check_definition" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check definition of critical object.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">input_check_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check definition of critical object.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2"> undefined (required for Delft3D coupling)&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.reset_counters" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reset_counters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.reset_counters" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Reset properties for next model update.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reset_counters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reset properties for next model update.&quot;&quot;&quot;</span>
+    <span class="n">sums</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;is_sumvalsnd&quot;</span><span class="p">)</span>
+    <span class="n">sums</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_variable</span><span class="p">(</span><span class="s2">&quot;is_sumvalsnd&quot;</span><span class="p">,</span> <span class="n">sums</span><span class="p">)</span>
+
+    <span class="n">maxs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s2">&quot;is_maxvalsnd&quot;</span><span class="p">)</span>
+    <span class="n">maxs</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_variable</span><span class="p">(</span><span class="s2">&quot;is_maxvalsnd&quot;</span><span class="p">,</span> <span class="n">maxs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.set_environment_variables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.set_environment_variables" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds the required environment variables in to the systems path.
+Windows: PATH
+Linux: LD_LIBRARY_PATH
+Os (Darwin): DYLD_LIBRARY_PATH</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds the required environment variables in to the systems path.</span>
+<span class="sd">    Windows: PATH</span>
+<span class="sd">    Linux: LD_LIBRARY_PATH</span>
+<span class="sd">    Os (Darwin): DYLD_LIBRARY_PATH</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">env_variables</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_environment_variables</span><span class="p">()</span>
+    <span class="n">env_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_sys_environment_key</span><span class="p">()</span>
+    <span class="c1"># Set variable</span>
+    <span class="n">path_var</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">env_key</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">env_var</span> <span class="ow">in</span> <span class="n">env_variables</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">env_var</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">path_var</span><span class="p">:</span>
+            <span class="n">path_var</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">env_var</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">env_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">path_var</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.set_morphology" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_morphology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.set_morphology" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Set morphological dimensions to Delft3D-model.</p>
+<p>:param coral: coral animal
+:type coral: Coral</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_morphology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set morphological dimensions to Delft3D-model.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_variable</span><span class="p">(</span><span class="s2">&quot;rnveg&quot;</span><span class="p">,</span> <span class="n">coral</span><span class="o">.</span><span class="n">as_vegetation_density</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_variable</span><span class="p">(</span><span class="s2">&quot;diaveg&quot;</span><span class="p">,</span> <span class="n">coral</span><span class="o">.</span><span class="n">dc_rep</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_variable</span><span class="p">(</span><span class="s2">&quot;stemheight&quot;</span><span class="p">,</span> <span class="n">coral</span><span class="o">.</span><span class="n">hc</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.set_variable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.set_variable" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Set variable to model wrapper.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>variable</code></td>
+        <td><code>str</code></td>
+        <td><p>Variable to set.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>Union[float, list, tuple, numpy.ndarray]</code></td>
+        <td><p>Value to set.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WrapperVariable</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set variable to model wrapper.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        variable (str): Variable to set.</span>
+<span class="sd">        value (Optional[WrapperVariable]): Value to set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="o">.</span><span class="n">set_var</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.Delft3D.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">,</span> <span class="n">stormcat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.Delft3D.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Update the Delft3D-model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">,</span> <span class="n">stormcat</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Update the Delft3D-model.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">time_step</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_interval_storm</span> <span class="k">if</span> <span class="n">stormcat</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_interval</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reset_counters</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_step</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_max_hydrodynamics</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">stormcat</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mean_hydrodynamics</span><span class="p">()</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.delft3d.DimrModel" class="doc doc-heading">
+        <code>DimrModel</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.DimrModel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Class implementing the <code>HydrodynamicProtocol</code> which makes use of a
+<code>BMIWrapper</code> to run its calculations.
+Based on a DIMR model configuration.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.DimrModel.check_dll_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_dll_path</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.DimrModel.check_dll_path" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Although not mandatory, we need to ensure at least a default value is given to the dll path.
+This default value is relative to the mandatory d3dhome attribute.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>values</code></td>
+        <td><code>dict</code></td>
+        <td><p>Validated (and formatted) dictionary of values for a Delft3D object.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>dict: Validated dictionary with a <code>dll_path</code>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@root_validator</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">check_dll_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Although not mandatory, we need to ensure at least a default value is given to the dll path.</span>
+<span class="sd">    This default value is relative to the mandatory d3dhome attribute.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        values (dict): Validated (and formatted) dictionary of values for a Delft3D object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Validated dictionary with a `dll_path`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dll_path_value</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dll_path&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dll_path_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;d3d_home&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">values</span><span class="p">[</span><span class="s2">&quot;dll_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;d3d_home&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="s2">&quot;dimr&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span> <span class="o">/</span> <span class="s2">&quot;dimr_dll.dll&quot;</span>
+    <span class="k">return</span> <span class="n">values</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.DimrModel.configure_model_wrapper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.DimrModel.configure_model_wrapper" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initilizes a BMIWrapper instance based on the given DIMR parameters.
+It is recommended to set the environment variables beforehand.
+If the PATH variables does not work it is recommended copying all the contents from the share
+directory into the dimr bin dir.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initilizes a BMIWrapper instance based on the given DIMR parameters.</span>
+<span class="sd">    It is recommended to set the environment variables beforehand.</span>
+<span class="sd">    If the PATH variables does not work it is recommended copying all the contents from the share</span>
+<span class="sd">    directory into the dimr bin dir.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span> <span class="o">=</span> <span class="n">BMIWrapper</span><span class="p">(</span>
+        <span class="n">engine</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dll_path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span> <span class="n">configfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config_file</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.DimrModel.get_environment_variables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.DimrModel.get_environment_variables" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the Python environment variables required to run a Dimr model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the Python environment variables required to run a Dimr model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;share&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;dflowfm&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;dimr&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;dwaves&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;esmf&quot;</span> <span class="o">/</span> <span class="s2">&quot;scripts&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;swan&quot;</span> <span class="o">/</span> <span class="s2">&quot;scripts&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.delft3d.FlowFmModel" class="doc doc-heading">
+        <code>FlowFmModel</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Class implementing the <code>HydrodynamicProtocol</code> which makes use of a
+<code>BMIWrapper</code> to run its calculations.
+Based on a FlowFM model configuration.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.check_dll_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_dll_path</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.check_dll_path" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Although not mandatory, we need to ensure at least a default value is given to the dll path.
+This default value is relative to the mandatory d3dhome attribute.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>values</code></td>
+        <td><code>dict</code></td>
+        <td><p>Validated (and formatted) dictionary of values for a Delft3D object.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>dict: Validated dictionary with a <code>dll_path</code>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@root_validator</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">check_dll_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Although not mandatory, we need to ensure at least a default value is given to the dll path.</span>
+<span class="sd">    This default value is relative to the mandatory d3dhome attribute.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        values (dict): Validated (and formatted) dictionary of values for a Delft3D object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Validated dictionary with a `dll_path`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dll_path_value</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dll_path&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dll_path_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;d3d_home&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">values</span><span class="p">[</span><span class="s2">&quot;dll_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="s2">&quot;d3d_home&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="s2">&quot;dflowfm&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span> <span class="o">/</span> <span class="s2">&quot;dflowfm.dll&quot;</span>
+    <span class="k">return</span> <span class="n">values</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.configure_model_wrapper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.configure_model_wrapper" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initilizes a BMIWrapper instance based on the given FlowFM parameters.
+Configures the model wrapper, it is recommended to set the environment variables beforehand.
+If the PATH variables does not work it is recommended copying all the contents from the share
+directory into the dimr bin dir.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">configure_model_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initilizes a BMIWrapper instance based on the given FlowFM parameters.</span>
+<span class="sd">    Configures the model wrapper, it is recommended to set the environment variables beforehand.</span>
+<span class="sd">    If the PATH variables does not work it is recommended copying all the contents from the share</span>
+<span class="sd">    directory into the dimr bin dir.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_wrapper</span> <span class="o">=</span> <span class="n">BMIWrapper</span><span class="p">(</span>
+        <span class="n">engine</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dll_path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span> <span class="n">configfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">definition_file</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.get_environment_variables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.get_environment_variables" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the Python environment variables required to run a FlowFM model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/delft3d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_environment_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Gets the Python environment variables required to run a FlowFM model.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;share&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3d_home</span> <span class="o">/</span> <span class="s2">&quot;dflowfm&quot;</span> <span class="o">/</span> <span class="s2">&quot;bin&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.space" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">space</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.space" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Number of non-boundary boxes; i.e. within-domain boxes.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.water_depth" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">water_depth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.water_depth" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Water depth.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.x_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">x_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.x_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Center of gravity's x-coordinates as part of <code>space</code>.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.xy_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">xy_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.xy_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The (x,y)-coordinates of the model domain,
+retrieved from hydrodynamic model; otherwise based on provided definition.</p>
+<p>:rtype: numpy.ndarray</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.delft3d.FlowFmModel.y_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">y_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.delft3d.FlowFmModel.y_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Center of gravity's y-coodinates as part of <code>space</code>.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="transect">Transect<a class="headerlink" href="#transect" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.transect.Transect" class="doc doc-heading">
+        <code>Transect</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.transect.Transect" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Implements the <code>HydrodynamicProtocol</code>.
+Simple 1D depth transect with imposed currents and waves</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.transect.Transect.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return repr(self).</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;Transect()&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.finalise" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.finalise" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Finalize the working model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Finalize the working model.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.initiate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.initiate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize the working model.
+In this case, read the spatial configuration and the forcings
+from files. Set the computing environment.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initialize the working model.</span>
+<span class="sd">    In this case, read the spatial configuration and the forcings</span>
+<span class="sd">    from files. Set the computing environment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">csv</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">x_coordinates</span> <span class="o">=</span> <span class="n">csv</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_coordinates</span> <span class="o">=</span> <span class="n">csv</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">water_depth</span> <span class="o">=</span> <span class="n">csv</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">outpoint</span> <span class="o">=</span> <span class="n">csv</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="n">forcings</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">definition_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stormcat</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">return_period</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wave_height</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wave_period</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wave_angle</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">max_curr_vel</span> <span class="o">=</span> <span class="n">forcings</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.input_check" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">input_check</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.input_check" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check if all requested content is provided</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">input_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if all requested content is provided&quot;&quot;&quot;</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="s2">&quot;xy_coordinates&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="s2">&quot;water_depth&quot;</span><span class="p">)</span>
+
+    <span class="n">files</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mdu&quot;</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">)</span>
+    <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_check_definition</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.input_check_definition" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">input_check_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.input_check_definition" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check definition of critical object.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">input_check_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check definition of critical object.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2"> undefined (required for Transect)&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.reset_counters" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reset_counters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.reset_counters" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Reset properties for next model update.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reset_counters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reset properties for next model update.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.set_morphology" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_morphology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.set_morphology" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Set morphological dimensions to Delft3D-model.</p>
+<p>:param coral: coral animal
+:type coral: Coral</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_morphology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set morphological dimensions to Delft3D-model.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.settings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">settings</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.transect.Transect.settings" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Print settings of simple transect imposed forcing.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.space" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">space</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.transect.Transect.space" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Number of non-boundary boxes; i.e. within-domain boxes.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">,</span> <span class="n">stormcat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.transect.Transect.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Update the model, which is just knowing the waves</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>coral</code></td>
+        <td><code>Coral</code></td>
+        <td><p>Coral morphology to use.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>stormcat</code></td>
+        <td><code>int</code></td>
+        <td><p>Storm category. Defaults to 0.</p></td>
+        <td><code>0</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>When stormcat not in [0,3] range.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tuple</code></td>
+      <td><p>Tuple containing calculated current velocity, wave velocity and wave period.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/transect.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">,</span> <span class="n">stormcat</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Update the model, which is just knowing the waves</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        coral (Coral): Coral morphology to use.</span>
+<span class="sd">        stormcat (int, optional): Storm category. Defaults to 0.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: When stormcat not in [0,3] range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Tuple: Tuple containing calculated current velocity, wave velocity and wave period.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean_current_vel</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">stormcat</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+        <span class="n">Hs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wave_height</span><span class="p">[</span><span class="n">stormcat</span><span class="p">]</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wave_period</span><span class="p">[</span><span class="n">stormcat</span><span class="p">]</span>
+        <span class="n">max_current_vel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_curr_vel</span><span class="p">[</span><span class="n">stormcat</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">water_depth</span>
+        <span class="n">wave_vel</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">Hs</span>
+            <span class="o">/</span> <span class="mi">4</span>
+            <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">9.81</span> <span class="o">/</span> <span class="n">h</span><span class="p">)</span>
+            <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="mf">3.65</span> <span class="o">/</span> <span class="n">T</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">h</span> <span class="o">/</span> <span class="mf">9.81</span><span class="p">)),</span> <span class="mf">2.1</span><span class="p">))</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stormcat = </span><span class="si">{</span><span class="n">stormcat</span><span class="si">}</span><span class="s2">, must be either 0,1,2,3&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">stormcat</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">mean_current_vel</span><span class="p">,</span> <span class="n">wave_vel</span><span class="p">,</span> <span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">max_current_vel</span><span class="p">,</span> <span class="n">wave_vel</span><span class="p">,</span> <span class="n">T</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.transect.Transect.xy_coordinates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">xy_coordinates</span><span class="p">:</span> <span class="n">ndarray</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.transect.Transect.xy_coordinates" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>The (x,y)-coordinates of the model domain,
+retrieved from hydrodynamic model; otherwise based on provided definition.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>np.ndarray: The (x,y) coordinates.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="reef-0d">Reef 0D<a class="headerlink" href="#reef-0d" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.reef_0d.Reef0D" class="doc doc-heading">
+        <code>Reef0D</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_0d.Reef0D" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Implements the <code>HydrodynamicProtocol</code>.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_0d.Reef0D.finalise" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_0d.Reef0D.finalise" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Finalise hydrodynamic model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_0d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Finalise hydrodynamic model.&quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_0d.Reef0D.initiate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_0d.Reef0D.initiate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initiate hydrodynamic model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_0d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initiate hydrodynamic model.&quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_0d.Reef0D.settings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">settings</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_0d.Reef0D.settings" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Print settings of Reef0D-model.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_0d.Reef0D.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">storm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_0d.Reef0D.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Update hydrodynamic model.</p>
+<p>:param coral: coral animal
+:param storm: storm conditions, defaults to False</p>
+<p>:type coral: Coral
+:type storm: bool, optional</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_0d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">storm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Update hydrodynamic model.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :param storm: storm conditions, defaults to False</span>
+
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    :type storm: bool, optional</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">storm</span><span class="p">:</span>
+        <span class="c1"># max(current_vel, wave_vel)</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="c1"># mean(current_vel, wave_vel, wave_per)</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h3 id="reef-1d">Reef 1D<a class="headerlink" href="#reef-1d" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-object doc-module">
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="src.core.hydrodynamics.reef_1d.Reef1D" class="doc doc-heading">
+        <code>Reef1D</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-pydantic-model"><code>pydantic-model</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Implements the <code>HydrodynamicProtocol</code>.
+Simplified one-dimensional hydrodynamic model over a (coral) reef.
+Internal 1D hydrodynamic model for order-of-magnitude calculations on the hydrodynamic conditions on a coral
+reef, where both flow and waves are included.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return repr(self).</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_1d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Reef1D(bathymetry=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bath</span><span class="si">}</span><span class="s2">, wave_height=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">Hs</span><span class="si">}</span><span class="s2">, &quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;wave_period=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">Tp</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">msg</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.dispersion" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">dispersion</span><span class="p">(</span><span class="n">wave_length</span><span class="p">,</span> <span class="n">wave_period</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">grav_acc</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.dispersion" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Dispersion relation to determine the wave length based on the
+wave period.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_1d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">dispersion</span><span class="p">(</span><span class="n">wave_length</span><span class="p">,</span> <span class="n">wave_period</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">grav_acc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dispersion relation to determine the wave length based on the</span>
+<span class="sd">    wave period.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="n">wave_length</span> <span class="o">-</span> <span class="p">((</span><span class="n">grav_acc</span> <span class="o">*</span> <span class="n">wave_period</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span>
+        <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">depth</span> <span class="o">/</span> <span class="n">wave_length</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">func</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.finalise" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.finalise" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Finalise hydrodynamic model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_1d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">finalise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Finalise hydrodynamic model.&quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.initiate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.initiate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initiate hydrodynamic model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_1d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">initiate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initiate hydrodynamic model.&quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.settings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">settings</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.settings" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Print settings of Reef1D-model.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">storm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span></code>
+
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.update" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Update hydrodynamic model.</p>
+<p>:param coral: coral animal
+:param storm: storm conditions, defaults to False</p>
+<p>:type coral: Coral
+:type storm: bool, optional</p>
+
+        <details class="quote">
+          <summary>Source code in <code>src/core/hydrodynamics/reef_1d.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coral</span><span class="p">:</span> <span class="n">Coral</span><span class="p">,</span> <span class="n">storm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Update hydrodynamic model.</span>
+
+<span class="sd">    :param coral: coral animal</span>
+<span class="sd">    :param storm: storm conditions, defaults to False</span>
+
+<span class="sd">    :type coral: Coral</span>
+<span class="sd">    :type storm: bool, optional</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">storm</span><span class="p">:</span>
+        <span class="c1"># max(current_vel, wave_vel)</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="c1"># mean(current_vel, wave_vel, wave_per)</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="src.core.hydrodynamics.reef_1d.Reef1D.wave_length" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">wave_length</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#src.core.hydrodynamics.reef_1d.Reef1D.wave_length" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Solve the dispersion relation to retrieve the wave length.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../coral/coral/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Coral" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Coral
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../output/output/" class="md-footer__link md-footer__link--next" aria-label="Next: Output" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Output
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Deltares
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Deltares/NBSDynamics" target="_blank" rel="noopener" title="Source code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>
